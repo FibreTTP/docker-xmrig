@@ -6,7 +6,7 @@ RUN set -xe; \
     apt update; \
     apt install -y nvidia-cuda-toolkit;
 
-ARG CUDA_PLUGIN_VERSION=6.17.0
+ARG CUDA_PLUGIN_VERSION=6.22.0
 RUN set -xe; \
     apt install -y wget build-essential cmake automake libtool autoconf; \
     apt install -y gcc-9 g++-9; \
@@ -23,7 +23,7 @@ RUN set -xe; \
 
 
 FROM ubuntu:22.04 as build-runner
-ARG VERSION=6.20.0
+ARG VERSION=6.22.0
 LABEL maintainer="Patrice Ferlet <metal3d@gmail.com>"
 
 RUN set -xe; \
